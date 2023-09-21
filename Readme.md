@@ -26,6 +26,8 @@ Design and develop an online sales report that displays the following informatio
 
 Answer:
 
+Interactive Dashboard Visualization:
+https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
 
 Customer R44 has ordered a total of 5.4 million pieces of materials. 
 The top three materials they purchased are as follows: 
@@ -39,3 +41,5 @@ Notably, their highest order quantities were in the years:
 - 2015 (1.16 million pieces)
 - 2017 (1.13 million pieces)
 - 2014 (0.93 million pieces)
+
+
