@@ -20,3 +20,5 @@ Design and develop an online sales report that displays the following informatio
 
 2.2 Correlation for Customer R44
 - Question 2.1, specifically find the correlation between products for Customer R44.
+
+<img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
