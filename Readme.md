@@ -34,6 +34,7 @@ The top three materials they purchased are as follows:
 - material_000024: 0.21 million pieces ordered
   
 Over the period from 2013 to 2018, they placed a total of 1577 orders for these materials.
+
 Notably, their highest order quantities were in the years:
 - 2015 (1.16 million pieces)
 - 2017 (1.13 million pieces)
