@@ -23,6 +23,10 @@ Design and develop an online sales report that displays the following informatio
 
 <img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
 
+
+Answer:
+
+
 Customer R44 has ordered a total of 5.4 million pieces of materials. 
 The top three materials they purchased are as follows: 
 - material_000226: 1.21 million pieces ordered
