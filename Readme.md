@@ -27,6 +27,7 @@ Design and develop an online sales report that displays the following informatio
 Answer:
 
 Interactive Dashboard Visualization:
+
 https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
 
 Customer R44 has ordered a total of 5.4 million pieces of materials. 
