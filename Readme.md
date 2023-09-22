@@ -16,17 +16,22 @@ Design and develop an online sales report that displays the following informatio
 ## Question 2: Data Analytics
 
 2.1 Correlation Analysis
-- Please perform a correlation analysis between products in a given dataset (sheet data1). Provide a detailed explanation of the solution you implement to find these correlations. 
+- Please perform a correlation analysis between products in a given dataset (sheet data1). Provide a detailed explanation of the solution you implement to find these correlations.
+  
+<img width="1405" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/b248607b-03f2-4021-a52e-18898b1bed6e">
+
 
 2.2 Correlation for Customer R44
 - Question 2.1, specifically find the correlation between products for Customer R44.
 
-<img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
 
 
-Answer:
+Additional
 
 Interactive Dashboard Visualization:
+
+
+<img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
 
 https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
 
