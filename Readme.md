@@ -18,10 +18,22 @@ Design and develop an online sales report that displays the following informatio
 2.1 Correlation Analysis
 - Please perform a correlation analysis between products in a given dataset (sheet data1). Provide a detailed explanation of the solution you implement to find these correlations.
 
+Using Excel:
+1. Explore Data: start by understanding the relationships between the columns in your dataset, especially the relationships between Customers, SaleOrders, Materials, and Pieces. For example, each customer row can have multiple SaleOrder entries.
+2. Create a PivotTable in Excel to prepare the data for correlation analysis. Set "Material" as the column field and "Pieces" as the value field. Additionally, create a filter for the "Customer" column, which allows you to select either all customers or a specific customer of interest.
+3. Apply Excel's analytical tools by navigating to "Data" -> "Data Analytics" -> "Correlation" and select the appropriate data range.
+4. Interpret the results. Values closer to 1 indicate a strong positive correlation, values closer to -1 indicate a strong negative correlation, and values close to 0 suggest little to no linear correlation.
+
+Using Tableau:
+5. Import the data into Tableau Public.
+6. In Tableau Public, use calculated fields to calculate correlation and adjust interactive dashboard.
+7. Finally, revisit and validate your findings with Excel to ensure the accuracy of the data and results.
+
 Link to Dashbboard:
 https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_link
   
 <img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/37c83655-7ef0-4a59-ba32-dc88e7f43d19">
+
 
 
 2.2 Correlation for Customer R44
