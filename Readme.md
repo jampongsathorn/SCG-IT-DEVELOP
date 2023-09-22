@@ -25,6 +25,8 @@ Using Excel:
 4. Interpret the results. Values closer to 1 indicate a strong positive correlation, values closer to -1 indicate a strong negative correlation, and values close to 0 suggest little to no linear correlation.
 
 Using Tableau:
+
+
 5. Import the data into Tableau Public.
 6. In Tableau Public, use calculated fields to calculate correlation and adjust interactive dashboard.
 7. Finally, revisit and validate your findings with Excel to ensure the accuracy of the data and results.
