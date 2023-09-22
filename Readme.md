@@ -17,6 +17,9 @@ Design and develop an online sales report that displays the following informatio
 
 2.1 Correlation Analysis
 - Please perform a correlation analysis between products in a given dataset (sheet data1). Provide a detailed explanation of the solution you implement to find these correlations.
+
+Link to Dashbboard:
+https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_link
   
 <img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/37c83655-7ef0-4a59-ba32-dc88e7f43d19">
 
@@ -24,15 +27,15 @@ Design and develop an online sales report that displays the following informatio
 2.2 Correlation for Customer R44
 - Question 2.1, specifically find the correlation between products for Customer R44.
 
+<img width="1392" alt="R44_Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/0f90d2f2-0d64-43e2-ad8c-baaa32b6a8e8">
 
-
-Additional
-
+## Additional
 Interactive Dashboard Visualization:
 
 
 <img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
 
+Link to Dashbboard:
 https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
 
 Customer R44 has ordered a total of 5.4 million pieces of materials. 
