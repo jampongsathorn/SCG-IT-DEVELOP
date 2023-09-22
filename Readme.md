@@ -18,7 +18,7 @@ Design and develop an online sales report that displays the following informatio
 2.1 Correlation Analysis
 - Please perform a correlation analysis between products in a given dataset (sheet data1). Provide a detailed explanation of the solution you implement to find these correlations.
   
-<img width="1405" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/b248607b-03f2-4021-a52e-18898b1bed6e">
+<img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/37c83655-7ef0-4a59-ba32-dc88e7f43d19">
 
 
 2.2 Correlation for Customer R44
