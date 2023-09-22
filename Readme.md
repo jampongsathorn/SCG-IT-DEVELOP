@@ -44,7 +44,7 @@ https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_l
 
 <img width="1392" alt="R44_Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/0f90d2f2-0d64-43e2-ad8c-baaa32b6a8e8">
 
-<img width="1015" alt="Screenshot 2566-09-22 at 18 42 28" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/b06d1bf9-7009-4c50-bcdb-c3da9b45eb75">
+<img width="1015" alt="Screenshot 2566-09-22 at 18 44 38" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/7bba6280-5118-4d5a-97d5-14e510d4f93c">
 
 ## Additional
 Interactive Dashboard Visualization:
