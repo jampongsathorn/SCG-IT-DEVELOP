@@ -38,21 +38,22 @@ https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_l
   
 <img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/8a99a7e7-03a1-41f3-a1f5-42651a820c71">
 
-<img width="1098" alt="Screenshot 2566-09-22 at 18 38 20" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/197853cc-31f7-47ac-81c4-20bbfff4b576">
+<img width="1098" alt="Excel Coefficience_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/d51c5ee6-69a9-4600-a65b-74b533a9f379">
+
 
 
 2.2 Correlation for Customer R44
 - Question 2.1, specifically find the correlation between products for Customer R44.
 
-<img width="1392" alt="R44_Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/0f90d2f2-0d64-43e2-ad8c-baaa32b6a8e8">
+<img width="1392" alt="R44_Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/7b9ef974-913a-4270-8bed-a7ad545405a6">
 
-<img width="1015" alt="Screenshot 2566-09-22 at 18 44 38" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/7bba6280-5118-4d5a-97d5-14e510d4f93c">
+<img width="1015" alt="Excel R44_Cofficient" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/7a417ba7-4fb2-45ab-8cf5-e92d6ea2f368">
 
 ## Additional
 Interactive Dashboard Visualization:
 
 
-<img width="1000" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/5e77d78f-ca5f-498a-ba61-09380e2df2fb">
+<img width="1173" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/03e8f688-0192-463c-b9a1-5c9a27c6b83a">
 
 Link to Dashbboard:
 https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
