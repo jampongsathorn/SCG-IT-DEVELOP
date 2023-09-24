@@ -36,7 +36,7 @@ Using Tableau:
 Link to Dashbboard:
 https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_link
   
-<img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/37c83655-7ef0-4a59-ba32-dc88e7f43d19">
+<img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/8a99a7e7-03a1-41f3-a1f5-42651a820c71">
 
 <img width="1098" alt="Screenshot 2566-09-22 at 18 38 20" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/197853cc-31f7-47ac-81c4-20bbfff4b576">
 
