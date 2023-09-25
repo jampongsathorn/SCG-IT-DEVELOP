@@ -18,6 +18,8 @@ Design and develop an online sales report that displays the following informatio
 - Sales actual vs. target comparison
 - Sales growth trend over time
 
+<img width="1408" alt="OnlineReport" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/6980606a-74f3-4d27-9a19-4b8bcae56577">
+
 My Online Sales Report Website: https://jampongsathorn.github.io/SCG-IT-DEVELOP/OnlineReport/admin.html
 
 ## Question 2: Data Analytics
