@@ -37,30 +37,29 @@
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="OnlineReport/admin.html">Admin Webpage</a></li>
                     </ul>
-                    <form class="d-flex" action="insert.php" method="POST">
+
+                    <!-- User Profile Dropdown -->
+                    <div class="dropdown" style="padding: 20px;">
+                        <a class="nav-item nav-link dropdown-toggle" id="profileDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="me-2" id="userName">Pongsathorn Boonturm</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li class="dropdown-item"><span class="text-muted" id="userId">User ID: 12345</span></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li class="dropdown-item" ><a href="#" style="color: black; text-decoration: none;">My Profile</a></li>
+                            <li class="dropdown-item"><a href="#" style="color: black; text-decoration: none;">Settings</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li class="dropdown-item"><a href="#" style="color: black; text-decoration: none;">Logout</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="d-flex">
                         <div class="dropdown ">
                             <button class="btn btn-outline-dark dropdown-toggle" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi-cart-fill me-1"></i> Cart <span id="cart-counter" class="badge bg-dark text-white ms-1 rounded-pill">2</span>
+                                <i class="bi-cart-fill me-1"></i> Cart <span id="cart-counter" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                             </button>
-                            <ul id="cartItems" class="dropdown-menu" aria-labelledby="cartDropdown" style="min-width: 400px;">
-                                <!-- Example item with Delete option -->
-                                <li>
-                                    <div class="d-flex justify-content-between align-items-center" style="padding: 15px;">
-                                        <span class="item">Material 000001</span>
-                                        <span class="price">40$</span>
-                                        <span class="quantity">100 Pcs</span>
-                                        <button class="btn btn-danger btn-sm" onclick="deleteCartItem(1)">Delete</button>
-                                    </div>
-                                </li>
-                                <!-- Example item with Delete option -->
-                                <li>
-                                    <div class="d-flex justify-content-between align-items-center" style="padding: 15px;">
-                                        <span class="item">Material 000004</span>
-                                        <span class="price">20$</span>
-                                        <span class="quantity">100 Pcs</span>
-                                        <button class="btn btn-danger btn-sm" onclick="deleteCartItem(2)">Delete</button>
-                                    </div>
-                                </li>
+                            <ul id="cartItems" class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown" style="min-width: 400px;">
+    
                                 <!-- Add more items with Delete buttons as needed -->
 
                                 <!-- Divider -->
@@ -69,7 +68,7 @@
                                 <!-- Check Bill button -->
                                 <li>
                                     <div class="text-center">
-                                        <button class=" btn-primary btn-sm" style="width: 100%;" onclick="checkBill()">Check Bill</button>
+                                        <button class=" btn-primary btn-sm" href="index.html" style="width: 100%;" onclick="checkBill()">Check Bill</button>
                                     </div>
                                 </li>
                             </ul>
@@ -101,17 +100,17 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000001</h5>
+                                    <h5 class="fw-bolder items">Material 000001</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    <p class="prices">$40</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select  name="quantity" class="quantities form-select">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -123,7 +122,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -135,7 +134,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000002</h5>
+                                    <h5 class="fw-bolder items">Material 000002</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -145,10 +144,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $20.00
+                                    <p class="prices">$20.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="quantities form-select">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -160,7 +159,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +173,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000003</h5>
+                                    <h5 class="fw-bolder items">Material 000003</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -184,10 +183,10 @@
                                     </div>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    <p class="prices">$25.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -199,7 +198,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -211,7 +210,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000004</h5>
+                                    <h5 class="fw-bolder items">Material 000004</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -221,10 +220,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    <p class="prices">$40.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -236,7 +235,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -250,7 +249,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000005</h5>
+                                    <h5 class="fw-bolder items">Material 000005</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -261,10 +260,10 @@
                                     </div>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    <p class="prices">$25.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -276,7 +275,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -288,7 +287,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000006</h5>
+                                    <h5 class="fw-bolder items">Material 000006</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -298,10 +297,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $280.00
+                                    <p class="prices">$280.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -313,7 +312,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -327,7 +326,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000007</h5>
+                                    <h5 class="fw-bolder items">Material 000007</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -338,10 +337,10 @@
                                     </div>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    <p class="prices">$18.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -353,7 +352,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -365,7 +364,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000008</h5>
+                                    <h5 class="fw-bolder items">Material 000008</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -374,10 +373,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $90.00
+                                    <p class="prices">$90.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -389,44 +388,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000009</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $60.00
-                                    <!-- Quantity selection -->
-                                    <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
-                                            <option value="" disabled selected>Select Quantity</option>
-                                            <option value="10">10 Pcs</option>
-                                            <option value="100">100 Pcs</option>
-                                            <option value="1000">1000 Pcs</option>
-                                            <!-- Add more options as needed -->
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -439,7 +401,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000010</h5>
+                                    <h5 class="fw-bolder items">Material 000009</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -448,10 +410,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $80.00
+                                    <p class="prices">$60.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -463,7 +425,44 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder items">Material 000010</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <p class="prices">$80.00</p>
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -476,7 +475,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000011</h5>
+                                    <h5 class="fw-bolder items">Material 000011</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -485,10 +484,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    <p class="prices">$40.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -500,7 +499,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -513,7 +512,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Material 000012</h5>
+                                    <h5 class="fw-bolder items">Material 000012</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -522,10 +521,10 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $70.00
+                                    <p class="prices">$70.00</p>
                                     <!-- Quantity selection -->
                                     <div class="text-center mt-3">
-                                        <select id="quantity" name="quantity" class="form-select">
+                                        <select id="quantity" name="quantity" class="form-select quantities">
                                             <option value="" disabled selected>Select Quantity</option>
                                             <option value="10">10 Pcs</option>
                                             <option value="100">100 Pcs</option>
@@ -537,7 +536,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart()">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(this)">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -565,6 +564,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>
