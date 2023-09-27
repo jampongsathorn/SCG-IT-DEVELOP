@@ -12,6 +12,8 @@ Design and develop an online ordering system with the following components:
 Design Database:
 <img width="1088" alt="Design Database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/f6bc961f-8888-47d6-8ecc-a5a0b5dab667">
 
+Sample Data:
+<img width="264" alt="scgOrders Table" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/f3a7b675-8972-4698-80a6-ae173a6a2716">
 
 
 My Website: https://jampongsathorn.github.io/SCG-IT-DEVELOP/
