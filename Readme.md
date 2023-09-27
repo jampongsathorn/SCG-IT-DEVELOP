@@ -9,6 +9,9 @@ Design and develop an online ordering system with the following components:
 
 <img width="1424" alt="Ordering System UI" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/e8e28930-1787-47c6-880c-c9609c5f5dd0">
 
+<img width="1088" alt="Design Database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/f6bc961f-8888-47d6-8ecc-a5a0b5dab667">
+
+
 
 My Website: https://jampongsathorn.github.io/SCG-IT-DEVELOP/
 
