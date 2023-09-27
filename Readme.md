@@ -13,7 +13,7 @@ Design Database:
 <img width="1088" alt="Design Database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/f6bc961f-8888-47d6-8ecc-a5a0b5dab667">
 
 Sample Data:
-<img width="264" alt="scgOrders database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/0719ad31-44c4-4795-b9fd-8a448a48ff57">
+<img width="1269" alt="scgOrders Database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/b996840a-af61-451c-b35b-b2613d8f2d72">
 
 
 
