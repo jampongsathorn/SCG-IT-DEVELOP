@@ -37,13 +37,45 @@
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="OnlineReport/admin.html">Admin Webpage</a></li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span id="cart-counter" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
+                    <form class="d-flex" action="insert.php" method="POST">
+                        <div class="dropdown ">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi-cart-fill me-1"></i> Cart <span id="cart-counter" class="badge bg-dark text-white ms-1 rounded-pill">2</span>
+                            </button>
+                            <ul id="cartItems" class="dropdown-menu" aria-labelledby="cartDropdown" style="min-width: 400px;">
+                                <!-- Example item with Delete option -->
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center" style="padding: 15px;">
+                                        <span class="item">Material 000001</span>
+                                        <span class="price">40$</span>
+                                        <span class="quantity">100 Pcs</span>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteCartItem(1)">Delete</button>
+                                    </div>
+                                </li>
+                                <!-- Example item with Delete option -->
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center" style="padding: 15px;">
+                                        <span class="item">Material 000004</span>
+                                        <span class="price">20$</span>
+                                        <span class="quantity">100 Pcs</span>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteCartItem(2)">Delete</button>
+                                    </div>
+                                </li>
+                                <!-- Add more items with Delete buttons as needed -->
+
+                                <!-- Divider -->
+                                <li class="dropdown-divider"></li>
+                                
+                                <!-- Check Bill button -->
+                                <li>
+                                    <div class="text-center">
+                                        <button class=" btn-primary btn-sm" style="width: 100%;" onclick="checkBill()">Check Bill</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </form>
+                    
                 </div>
             </div>
         </nav>
@@ -77,6 +109,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $40.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -104,6 +146,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $20.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -133,6 +185,16 @@
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
                                     $25.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -160,6 +222,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $40.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -190,6 +262,16 @@
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
                                     $25.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -216,7 +298,17 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $120.00 - $280.00
+                                    $280.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -247,6 +339,16 @@
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$20.00</span>
                                     $18.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -273,6 +375,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $90.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -300,6 +412,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $60.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -327,6 +449,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $80.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -354,6 +486,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $40.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -381,6 +523,16 @@
                                     </div>
                                     <!-- Product price-->
                                     $70.00
+                                    <!-- Quantity selection -->
+                                    <div class="text-center mt-3">
+                                        <select id="quantity" name="quantity" class="form-select">
+                                            <option value="" disabled selected>Select Quantity</option>
+                                            <option value="10">10 Pcs</option>
+                                            <option value="100">100 Pcs</option>
+                                            <option value="1000">1000 Pcs</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Product actions-->
