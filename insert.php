@@ -1,30 +1,40 @@
 <?php
-include("dbh-inc.php");
+$host = "sql12.freesqldatabase.com";
+$databaseName = "sql12649280";
+$databaseUser = "sql12649280";
+$databasePassword = "7wpRdPUiqx";
+$port = 3306;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userID = $_POST["userID"];
-    $item = $_POST["item"];
-    $Pc = $_POST["Pc"];
-    $price = $_POST["price"];
+try {
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$databaseName", $databaseUser, $databasePassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "INSERT INTO scgOrders (userID, item, Pc, price) VALUES (:userID, :item, :Pc, :price)";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $item = $_POST["item"];
+        $Pc = $_POST["Pc"];
+        $price = $_POST["price"];
 
-    try {
+        $sql = "INSERT INTO scgOrders (item, Pc, price) VALUES (:item, :Pc, :price)";
+
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':userID', $userID);
+
+        // You need to provide the userID value. Replace '123' with the actual userID.
+        $userID = 123;
+
         $stmt->bindParam(':item', $item);
         $stmt->bindParam(':Pc', $Pc);
         $stmt->bindParam(':price', $price);
 
         $stmt->execute();
 
-        $pdo = null;
-
         echo "Data inserted successfully!";
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+    } else {
+        echo "Form not submitted.";
     }
-} else {
-    echo "Form not submitted.";
+
+    $pdo = null; // Close the database connection
+} catch (PDOException $e) {
+    // Handle any database connection errors here
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
