@@ -9,23 +9,40 @@ try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$databaseName", $databaseUser, $databasePassword);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Check if the request method is POST
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $item = $_POST["item"];
-        $Pc = $_POST["Pc"];
-        $price = $_POST["price"];
+        // Receive the JSON data from the POST request
+        $jsonData = file_get_contents("php://input");
 
-        $sql = "INSERT INTO scgOrders (item, Pc, price) VALUES (:item, :Pc, :price)";
+        // Decode the JSON data into an associative array
+        $data = json_decode($jsonData, true);
 
-        $stmt = $pdo->prepare($sql);
+        // Extract data from the associative array
+        $userID = $data["userID"];
+        $items = $data["items"];
+        $pcs = $data["pcs"];
+        $prices = $data["prices"];
 
-        // You need to provide the userID value. Replace '123' with the actual userID.
-        $userID = 123;
+        // Loop through the items and insert each item into the database
+        for ($i = 0; $i < count($items); $i++) {
+            $item = $items[$i];
+            $pc = $pcs[$i];
+            // Remove the "$" symbol and convert the price to a numeric value
+            $price = floatval(str_replace("$", "", $prices[$i]));
 
-        $stmt->bindParam(':item', $item);
-        $stmt->bindParam(':Pc', $Pc);
-        $stmt->bindParam(':price', $price);
+            // Prepare the SQL statement
+            $sql = "INSERT INTO scgOrders (userID, item, Pc, price) VALUES (:userID, :item, :Pc, :price)";
 
-        $stmt->execute();
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->bindParam(':userID', $userID);
+            $stmt->bindParam(':item', $item);
+            $stmt->bindParam(':Pc', $pc);
+            $stmt->bindParam(':price', $price);
+
+            // Execute the SQL statement
+            $stmt->execute();
+        }
 
         echo "Data inserted successfully!";
     } else {
