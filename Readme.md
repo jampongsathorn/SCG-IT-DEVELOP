@@ -7,7 +7,7 @@ Design and develop an online ordering system with the following components:
 - Backend User Interface (UI)
 - Database
 
-<img width="1424" alt="Ordering System UI" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/e8e28930-1787-47c6-880c-c9609c5f5dd0">
+<img width="1422" alt="Ordering Website UI" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/39a03973-475c-4b4b-9a91-023de179c594">
 
 Design Database:
 <img width="1088" alt="Design Database" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/f6bc961f-8888-47d6-8ecc-a5a0b5dab667">
