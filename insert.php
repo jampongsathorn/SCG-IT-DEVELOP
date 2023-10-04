@@ -1,8 +1,9 @@
 <?php
+// Insert from website to database
 $host = "sql12.freesqldatabase.com";
-$databaseName = "sql12649280";
-$databaseUser = "sql12649280";
-$databasePassword = "7wpRdPUiqx";
+$databaseName = "sql12650860";
+$databaseUser = "sql12650860";
+$databasePassword = "UILQH2ZyNU";
 $port = 3306;
 
 try {
@@ -19,6 +20,7 @@ try {
 
         // Extract data from the associative array
         $userID = $data["userID"];
+        $orderDate = $data["orderDate"];
         $items = $data["items"];
         $pcs = $data["pcs"];
         $prices = $data["prices"];
@@ -31,11 +33,12 @@ try {
             $price = floatval(str_replace("$", "", $prices[$i]));
 
             // Prepare the SQL statement
-            $sql = "INSERT INTO scgOrders (userID, item, Pc, price) VALUES (:userID, :item, :Pc, :price)";
+            $sql = "INSERT INTO scgOrders (userID, orderDate , item, Pc, price) VALUES (:userID, :orderDate, :item, :Pc, :price)";
 
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindParam(':userID', $userID);
+            $stmt->bindParam(':orderDate', $orderDate);
             $stmt->bindParam(':item', $item);
             $stmt->bindParam(':Pc', $pc);
             $stmt->bindParam(':price', $price);
