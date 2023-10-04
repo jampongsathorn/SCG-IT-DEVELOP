@@ -69,6 +69,39 @@ function deleteCartItem(newItem) {
 
 
 
+// quantity
+function handleQuantityChange(btnType, inputField) {
+    const inputElement = inputField.closest('.card').querySelector('.input-number');
+    let currentValue = parseInt(inputElement.value);
+
+    if (btnType === 'plus') {
+        currentValue++;
+    } else if (btnType === 'minus' && currentValue > 1) {
+        currentValue--;
+    }
+
+    inputElement.value = currentValue;
+}
+
+// Attach event listeners to the "+" and "-" buttons
+document.addEventListener('DOMContentLoaded', function () {
+    const plusButtons = document.querySelectorAll('.btn-number[data-type="plus"]');
+    const minusButtons = document.querySelectorAll('.btn-number[data-type="minus"]');
+
+    plusButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            handleQuantityChange('plus', button);
+        });
+    });
+
+    minusButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            handleQuantityChange('minus', button);
+        });
+    });
+});
+
+
 // Define the user names and their corresponding IDs
 var users = [
     { name: "Pongsathorn", id: 10400 },
@@ -105,6 +138,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function checkBill() {
+
+    // Get current date
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1;
+    let dd = today.getDate();
+
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+
+    const formattedToday = yyyy + '/' + mm + '/' + dd;
+
     // Get user name from the profile dropdown
     var userID = document.getElementById("userId").textContent;
     userID = userID.replace("User ID: ", "");
@@ -136,6 +181,7 @@ function checkBill() {
     // Prepare the data to be sent as a JSON string
     var postData = {
         userID: userID,
+        orderDate: formattedToday,
         items: items,
         pcs: pcs,
         prices: prices,
@@ -143,7 +189,7 @@ function checkBill() {
 
     console.log(postData);
 
-    fetch('insert.php', {
+    fetch('insertData.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -163,8 +209,6 @@ function checkBill() {
         // Handle any network errors
         console.error("Network error:", error);
     });
+
+
 }
-
-
-
-
