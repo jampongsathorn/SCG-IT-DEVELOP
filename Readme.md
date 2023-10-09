@@ -50,7 +50,7 @@ Using Tableau:
 7. Finally, revisit and validate your findings with Excel to ensure the accuracy of the data and results.
 
 Link to Dashbboard:
-https://public.tableau.com/shared/GR6BFDGSM?:display_count=n&:origin=viz_share_link
+https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD-CORR/CorrelationDashboard?:language=en-GB&:display_count=n&:origin=viz_share_link
   
 <img width="1404" alt="Coefficient_matrix" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/8a99a7e7-03a1-41f3-a1f5-42651a820c71">
 
@@ -72,7 +72,8 @@ Interactive Dashboard Visualization:
 <img width="1173" alt="R44-Customer-Analysis" src="https://github.com/jampongsathorn/SCG-IT-DEVELOP/assets/85749998/03e8f688-0192-463c-b9a1-5c9a27c6b83a">
 
 Link to Dashbboard:
-[https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link](https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD/MainDashboard?:language=en-GB&:display_count=n&:origin=viz_share_link)
+https://public.tableau.com/views/SCG-IT-DEVELOPER-DASHBOARD-CORR/CorrelationDashboard?:language=en-GB&:display_count=n&:origin=viz_share_link
+
 
 Customer R44 has ordered a total of 5.4 million pieces of materials. 
 The top three materials they purchased are as follows: 
